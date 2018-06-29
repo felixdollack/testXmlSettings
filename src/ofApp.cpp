@@ -1,5 +1,11 @@
 #include "ofApp.h"
 
+void ofApp::debugPrint() {
+    std::cout << "blinkRate: " << this->rate << std::endl;
+    std::cout << "gravity: "   << this->g    << std::endl;
+    std::cout << "scene: "     << this->name << std::endl << std::endl;
+}
+
 //--------------------------------------------------------------
 void ofApp::setup(){
     this->settings = new ofxXmlSettings();
@@ -12,10 +18,7 @@ void ofApp::setup(){
         writeDefaultSettings();
     }
 
-    // debug print
-    std::cout << "blinkRate: " << rate << std::endl;
-    std::cout << "gravity: "   << g    << std::endl;
-    std::cout << "scene: "     << name << std::endl << std::endl;
+    debugPrint();
 }
 
 //--------------------------------------------------------------
@@ -23,6 +26,7 @@ void ofApp::keyPressed(int key){
     if (key == 'r') {
         // reload
         this->loadSettings();
+        debugPrint();
     }
     if (key == 's') {
         // save

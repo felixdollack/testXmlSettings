@@ -15,6 +15,7 @@ class ofApp : public ofBaseApp{
         void writeSettings();
         void loadSettings();
     
+        void debugPrint();
         int rate;
         float g;
         string name;
