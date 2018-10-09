@@ -20,4 +20,5 @@ class ofApp : public ofBaseApp{
         float g;
         string name;
         int n_pos;
+        vector<ofVec2f> pos;
 };
