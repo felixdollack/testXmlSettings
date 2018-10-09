@@ -19,4 +19,5 @@ class ofApp : public ofBaseApp{
         int rate;
         float g;
         string name;
+        int n_pos;
 };
